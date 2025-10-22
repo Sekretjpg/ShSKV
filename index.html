@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школа святого князя Владимира</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">Школа святого князя Владимира</h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#focus">Направления</a></li>
+                    <li><a href="#teachers">Преподаватели</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#contacts-info">Контакты</a></li>
+                    <li><button class="schedule-button">Расписание 🗓️</button></li> 
+                </ul>
+            </nav>
+            
+            <div class="theme-switch-wrapper">
+              <label class="theme-toggle" for="theme-toggle-input" aria-label="Переключение темы">
+                  <input type="checkbox" id="theme-toggle-input">
+                  <span class="slider">
+                      <span class="icon light-icon">☀️</span>
+                      <span class="icon dark-icon">🌙</span>
+                  </span>
+              </label>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Инновации и качество образования</h2>
+                <p>Развиваем ключевые навыки для успеха в XXI веке.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>О Нашей школе</h2>
+                <p>Школа святого князя Владимира — это современный образовательный центр, ориентированный на углубленное изучение **технических и гуманитарных наук**. Мы используем проектный подход, развиваем критическое мышление и готовим выпускников к поступлению в ведущие вузы страны и мира. Наш фокус — **индивидуальный рост и практические знания**.</p>
+            </div>
+            <br>
+            <div>
+                <blockquote cite="-" style="text-align: center;">
+                    <p>Копите знания, в них скрыта Мудрость,</p>
+                    <p>Она нужна для выбора пути.</p>
+                    <p>Всё это нужно будет — это Сущность,</p>
+                    <p>Чтобы с успехом к цели подойти.</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="focus" class="section gray-bg">
+            <div class="container">
+                <h2>Ключевые Направления</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>Точные науки</h3>
+                        <p>Углубленные курсы по математике, физике и информатике.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Иностранные языки</h3>
+                        <p>Интенсивное изучение английского, кыргызский.</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Проектная деятельность</h3>
+                        <p>Развитие командной работы и навыков презентации.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teachers" class="section">
+            <div class="container">
+                <h2>Наша команда преподавателей</h2>
+                
+                <div class="carousel-wrapper"> 
+                    <div class="carousel-container">
+                        <div id="teachers-carousel" class="carousel">
+                            <p class="loading-text">Загрузка данных о преподавателях...</p>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-button prev-button" aria-label="Предыдущий слайд"><</button>
+                    <button class="carousel-button next-button" aria-label="Следующий слайд">></button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="news" class="section gray-bg">
+            <div class="container">
+                <h2>Актуальные Новости и Анонсы</h2>
+                <div id="news-container" class="news-grid">
+                    <p class="loading-text">Загрузка последних новостей...</p>
+                </div>
+                <div style="text-align: center;">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts-info" class="section">
+            <div class="container contact-info-grid">
+                <h2>Наши Контакты</h2>
+                <div class="contact-details">
+                    <h3>Свяжитесь с нами</h3>
+                    <p><strong>Адрес:</strong> Проспект Жибе-Жылу 198</p>
+                    <p><strong>Телефон:</strong> <a href="tel:[Номер телефона]">[Номер телефона]</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:[Email]">Официальный Email</a></p>
+                    <p><strong>Приемная:</strong> Пн-Пт с 9:00 до 17:00</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Школа святого князя Владимира. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

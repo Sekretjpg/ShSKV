@@ -1,0 +1,154 @@
+/* Общие стили для всех устройств */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px; /* Уменьшаем общий паддинг для мобильных */
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+.container {
+    max-width: 900px;
+    margin: 15px auto; /* Уменьшаем отступы сверху/снизу */
+    background: #ffffff;
+    padding: 20px; /* Уменьшаем внутренний паддинг */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Немного уменьшаем размер заголовка */
+}
+
+/* Элементы управления (select, button) */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.95em;
+}
+
+select, button {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+select {
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M6%207.5L0.5%201.5L1.5%200.5L6%205L10.5%200.5L11.5%201.5L6%207.5Z%22%20fill%3D%22%23495057%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#schedule-output {
+    margin-top: 20px;
+    padding: 0;
+}
+
+#schedule-output h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 0.9em; /* Немного уменьшаем шрифт таблицы */
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px; /* Уменьшаем паддинг ячеек */
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: 700;
+    color: #495057;
+}
+
+/* Классы для JS */
+.hidden { 
+    display: none; 
+}
+
+.today {
+    background-color: #fffacd !important; /* Светло-желтый фон */
+    font-weight: bold;
+}
+
+/* ======================================= */
+/* !!! ОПТИМИЗАЦИЯ ДЛЯ ТЕЛЕФОНОВ (Media Query) !!! */
+/* ======================================= */
+
+@media (max-width: 600px) {
+    
+    .container {
+        padding: 15px; /* Уменьшаем паддинг контейнера на телефонах */
+        margin: 0 auto; /* Убираем вертикальные отступы */
+        border-radius: 0; /* Убираем закругление углов для полного использования ширины */
+    }
+
+    /* Адаптация таблицы для узких экранов */
+    /* Делаем таблицу отзывчивой, позволяя ей горизонтально прокручиваться */
+    #schedule-output {
+        overflow-x: auto; /* Включаем горизонтальную прокрутку */
+        -webkit-overflow-scrolling: touch; /* Улучшаем прокрутку на iOS */
+    }
+
+    /* Устанавливаем минимальную ширину таблицы, чтобы она не сжималась слишком сильно */
+    table {
+        min-width: 500px; /* Минимальная ширина, чтобы контент не налезал друг на друга */
+    }
+    
+    /* Дополнительное уменьшение шрифта для узких экранов */
+    table, select, button {
+        font-size: 0.85em;
+    }
+
+    th, td {
+        padding: 6px; /* Еще больше уменьшаем паддинг ячеек */
+    }
+    
+    /* Устанавливаем фиксированную ширину для столбца "Время", чтобы сэкономить место */
+    th:nth-child(2), td:nth-child(2) {
+        min-width: 60px;
+        width: 10%;
+    }
+    
+    /* Столбец с днями недели делаем уже */
+    th:nth-child(1), td:nth-child(1) {
+        min-width: 80px;
+        width: 20%;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Школьное Расписание</title>
+    <link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Школьное Расписание</h1>
+
+        <label for="role-select">Кто Вы?</label>
+        <select id="role-select" onchange="handleRoleChange()">
+            <option value="" selected disabled>-- Выберите роль --</option>
+            <option value="Ученик">Ученик</option>
+            <option value="Учитель">Учитель</option>
+        </select>
+
+        <div id="student-controls" class="hidden">
+            <label for="class-select">Выберите класс:</label>
+            <select id="class-select"></select>
+            <button onclick="displaySchedule('Ученик')">Показать расписание класса</button>
+        </div>
+
+        <div id="teacher-controls" class="hidden">
+            <label for="teacher-select">Выберите учителя:</label>
+            <select id="teacher-select"></select>
+            <button onclick="displaySchedule('Учитель')">Показать расписание учителя</button>
+        </div>
+
+        <div id="schedule-output">
+            Выберите свою роль, чтобы увидеть расписание.
+        </div>
+    </div>
+
+    <script src="lesson.js"></script>
+</body>
+</html>
